@@ -1,0 +1,24 @@
+{
+  "name": "bottemplate",
+  "version": "2.0.0",
+  "description": "Discord Bot Template",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.0.1",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Netail/BotTemplate.git"
+  },
+  "author": "Netail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Netail/BotTemplate/issues"
+  },
+  "homepage": "https://github.com/Netail/BotTemplate#readme"
+}
