@@ -3,8 +3,8 @@ const reqGuildEvent = (event) => require(`../events/guild/${event}`);
 
 module.exports = client => {
     // Client Events
-    client.on("ready", function() {reqClientEvent("ready") (client)});
+    client.on("ready", () => {reqClientEvent("ready") (client)});
 
     // Guild Events
-    client.on("message", async message => reqGuildEvent("message") (client, message));
+    client.on("message", (message) => reqGuildEvent("message") (client, message));
 }

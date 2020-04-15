@@ -6,7 +6,7 @@ module.exports = {
     category: "{category}",
     description: "{desc}",
     usage: "{usage}",
-    run: async (client, message, args) => {
+    run: (client, message, args) => {
         message.channel.send("Pong!");
     }
 }
