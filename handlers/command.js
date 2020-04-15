@@ -13,7 +13,7 @@ module.exports = client => {
                 client.commands.set(pull.name, pull);
                 console.log(`${file} - ✅`)
             } else {
-                console.log(`${file} - ❌ -> Module name was not defined or not a String.`);
+                console.log(`${file} - ❌ -> Command name was not defined or not a String.`);
                 continue;
             }
     

@@ -11,9 +11,11 @@ module.exports = {
             require(`../../handlers/command.js`) (client);
         }
         catch(err) {
-            return message.channel.send(`Failed to reload commands; ${err}`);
+            console.log(err);
+            message.channel.send(`❌ **Failed to reload commands!** (Read Console)`);
+            return;
         }
 
-        message.channel.send("Commands succesfully reloaded!");
+        message.channel.send("✅ **Succesfully reloaded commands!**");
     }
 }
