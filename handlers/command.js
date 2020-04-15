@@ -1,18 +1,19 @@
-const { readdirSync } = require("fs");
+const { readdirSync } = require('fs');
 
 module.exports = client => {
     readdirSync("./commands/").forEach(dir => {
 
-        const commands = readdirSync(`./commands/${dir}/`).filter(file => file.endsWith(".js"));
-    
+        var commands = readdirSync(`./commands/${dir}/`).filter(file => file.endsWith(".js"));
+
         for (let file of commands) {
+            delete require.cache[require.resolve(`../commands/${dir}/${file}`)];
             let pull = require(`../commands/${dir}/${file}`);
     
             if (pull.name) {
                 client.commands.set(pull.name, pull);
-                console.log(`${file} ✅`);
+                console.log(`${file} - ✅`)
             } else {
-                console.log(`${file} ❌ -> missing a help.name, or help.name is not a string.`)
+                console.log(`${file} - ❌ -> Module name was not defined or not a String.`);
                 continue;
             }
     

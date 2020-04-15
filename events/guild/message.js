@@ -1,12 +1,8 @@
-const config = require('../../storage/config.json');
-const Discord = require("discord.js");
+const { prefix } = require('../../storage/config.json');
+const Discord = require('discord.js');
 
 module.exports = (client, message) => {
-    let prefix = config.prefix;
-
-    if (message.author.bot) return;
-    if (message.channel.type === "dm") return;
-    if (!message.content.startsWith(prefix)) return;
+    if (message.author.bot || message.channel.type === "dm" || !message.content.startsWith(prefix)) return;
 
     let messageArray = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = messageArray[0].toLowerCase();

@@ -1,5 +1,5 @@
-const config = require('./storage/config.json');
-const { Client, Collection } = require("discord.js");
+const { token } = require('./storage/config.json');
+const { Client, Collection } = require('discord.js');
 
 const client = new Client();
 
@@ -10,4 +10,4 @@ require(`./handlers/command`) (client);
 
 require(`./handlers/event`) (client);
 
-client.login(config.token);
+client.login(token);
