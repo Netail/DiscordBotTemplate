@@ -1,5 +1,4 @@
 const { prefix } = require('../../storage/config.json');
-const Discord = require('discord.js');
 
 module.exports = (client, message) => {
     if (message.author.bot || message.channel.type === "dm" || !message.content.startsWith(prefix)) return;
